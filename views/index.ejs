@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Отчеты автоматизированной загрузки "AutoTariffs"</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="shortcut icon" href="/favicon.png">
+    <script src="/app.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div id="app">
+            {{ message }}
+        </div>
+        <div class="block header">
+            <div>Отчёт автоматизированной загрузки тарифов</div>
+            <div class="badge average">Среднее время:
+                <%=averageTime%>
+            </div>
+        </div>
+        <div class="block files">
+            <% for (var file in files) { var i = files[file]; %>
+                <div class="file">
+                    <span class="name"><a title="Посмотреть" target="_blank" href="<%=i.name%>"><%=i.name%></a></span>
+                    <span class="badge status <%=i.status%>"><%=i.statusMessage%></span>
+                    <% if (i.execTime) { %>
+                        <span class="badge execTime"><%=i.execTime%></span>
+                        <% } %>
+                </div>
+            <% } %>
+        </div>
+        <div class="block copyright">Разработано Лобков Александр</div>
+    </div>
+</body>
+
+</html>

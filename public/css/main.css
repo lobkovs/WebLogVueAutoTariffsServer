@@ -1,0 +1,105 @@
+html {
+	height: 100%;
+	overflow: hidden;
+}
+
+body {
+	background-image: url(../dust_scratches.png);
+	position: relative;
+	margin: 0;
+	box-sizing: border-box;
+	height: 100%;
+}
+
+.wrapper {
+	height: 100%;
+}
+
+.block {
+	width: 100%;
+}
+
+.header {
+	background-color: rgba(0,0,0,.85);
+	padding: 20px 0 15px;
+	text-align: center;
+	color: white;
+	font-size: 2em;
+}
+
+.files {
+	padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    height: 85.5%;
+    border: 0;
+    margin-bottom: 30px;
+}
+
+.file {
+	border: 1px solid #ccc;
+	padding: 20px 15px ;
+	box-sizing: border-box;
+	margin-bottom: 5px;
+	border-radius: 5px;
+	width: 100%;
+}
+
+.file:hover {
+	background-color: rgba(251, 202, 142, 0.65);
+}
+.file .name {
+	padding-right: 5%;
+	font-weight: bold;
+}
+
+.badge {
+	border-radius: 3px;
+	padding: 3px 6px;
+}
+
+.status {
+	color: white;
+	margin-right: 20px;
+}
+
+.status.done {
+	border: 1px solid #006b00;
+    background-color: #008200;
+}
+
+.status.exec {
+    border: 1px solid #d86400;
+    background-color: #ff7600;
+}
+
+.status.error {
+    border: 1px solid #661100;
+    background-color: #881100;
+}
+
+.execTime {
+	border: 1px solid #ccc;
+	background-color: #eee;
+}
+
+.average {
+	font-size: .6em;
+}
+
+.copyright {
+	position: absolute;
+    bottom: 0;
+    background-color: rgba(0,0,0,.85);
+    font-size: .9em;
+    left: 0;
+    color: white;
+    padding: 7px 0 3px;
+    text-align: center;
+    height: 20px;
+    box-sizing: content-box;
+}
+
+.copyright * {
+	color: white;
+}
